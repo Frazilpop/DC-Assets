@@ -1,0 +1,297 @@
+<!--#region head-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<title>User Guide</title>
+<link rel="stylesheet" type= "text/css" href= "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" />
+<link rel="stylesheet" type= "text/css" href= "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
+<link rel="stylesheet" type= "text/css" href= "../style.css" />
+<link rel="stylesheet" type= "text/css" href= "../fonts.css" />
+<link rel="stylesheet" type= "text/css" href= "../nav.css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script> 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
+<link href="https://fonts.googleapis.com/css?family=Lusitana&display=swap" rel="stylesheet">
+</head>
+<body>
+<!--#endregion-->
+
+<!--#region nav-left-->
+<div id="wrapper">
+<div id="sidebar-wrapper">
+<ul class="sidebar-nav">
+<div class="nav-icon-alt header-nav-icon_c" id="menu-toggle_c"></div>
+<li> <a href="../index.html">Home</a>
+</li>
+<li> <a href="user-guide.html">User Guide</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="nav-icon header-nav-icon" id="menu-toggle"></div>
+<!--#endregion-->
+<!--#region page-content-->
+<!--*H-->
+<div class="logo-offset">
+    <img class="center-image feature-logo logo-padding-r" src="" alt="" />
+</div>
+
+<div class="align-center-d article-title">
+    <h2><span class="main-title" >User Guide</span><br></h2>
+</div>
+<div class="half-space"></div>
+
+<div class="text-block padding-top padding-bottom">
+    <!--&-->
+    How to use the Multiple Projects Exporter.<br><br>
+
+  <a href="#index-1" class="url-dark-green">Getting Started</a><br>
+  <a href="#index-2" class="url-dark-green">Should I use the 'Simple' or 'Advanced' tools?</a><br>
+  <a href="#index-3" class="url-dark-green">The Interface</a><br>
+  <a href="#index-4" class="url-dark-green">Export Config.</a><br>
+  <a href="#index-5" class="url-dark-green">Running an Export</a>
+    <!--&-->
+</div>
+
+<!--#region Dashed Line-->
+<br>
+<div class="dashed-line"></div>
+<br>
+<!--#endregion Dashed Line-->
+
+<!-- #region sub-heading -->
+<div class="sub-heading text-block padding-top" id="index-1">
+    <span class="cms-sub-heading">Getting Started</span>
+   
+</div>
+<!-- #endregion sub-heading -->
+
+<div class="text-block padding-top padding-bottom">
+    <!--&-->
+    Import the Multiple Projects Exporter Unity package into your project. The multiple project exporter can then be loaded from ‘Window ––> Multiple Project Exporter’.
+<br><br>
+    This window is split into three tabs; ’Simple’, ‘Advanced’ and ‘Export’
+    <!--&-->
+</div>
+
+<div class="text-block padding-top padding-bottom">
+    <!--&-->
+    <strong>Simple</strong><br>
+The main Player Settings and Build Scenes are saved to an ExportSettings asset file. Scene/ settings variants can be configured using Unity’s built-in options and then saved to different ExportSettings profiles. These can then be selected and written back onto the player/ build settings as required.
+    <!--&-->
+</div>
+
+<div class="text-block padding-top padding-bottom">
+    <!--&-->
+    <strong>Advanced</strong><br>
+A selection of files within the ProjectSettings folder is defined and then copied to a new folder location. Each export variant exists as a folder with the required ProjectSettings files located within. These can then be swapped back into the master ProjectSettings as required.
+    <!--&-->
+</div>
+
+<div class="text-block padding-top padding-bottom">
+    <!--&-->
+    <strong>Export</strong><br>
+The export tools can be used to write the settings defined in either Simple of Advanced mode at the point of running a shell or bash script that builds the project.
+<br><br>
+Note: the use of scripts is not required, the build options in Simple and Advanced mode provide tools for building the project directly in Unity.
+    <!--&-->
+</div>
+
+<!--#region Dashed Line-->
+<br>
+<div class="dashed-line"></div>
+<br>
+<!--#endregion Dashed Line-->
+
+<!-- #region sub-heading -->
+<div class="sub-heading text-block padding-top" id="index-2">
+    <span class="cms-sub-heading">Should I use the 'Simple' or 'Advanced' tools?</span>
+</div>
+<!-- #endregion sub-heading -->
+
+<div class="text-block padding-top padding-bottom">
+    <!--&-->
+    Simple mode copies the PlayerSettings data into a single asset file. These are easy to manage and are also readable/ editable from the Unity inspector. 
+<br><br>
+In general, Simple mode will work best if the variations in exported projects are covered by the following:
+<br><br>
+  –Product Name<br>
+  –Company Name<br>
+  –Version Number<br>
+  –Bundle Identifier and Mac App Store validation<br>
+  –Standalone Icons<br>
+  –Build Scenes
+<br><br>
+Meanwhile advanced mode offers full flexibility for swapping between a selection (or all) of the ProjectSettings files. This works best for specific variations not covered above (e.g. different splash screens or different input managers).
+    <!--&-->
+</div>
+
+<!--#region Dashed Line-->
+<br>
+<div class="dashed-line"></div>
+<br>
+<!--#endregion Dashed Line-->
+
+<!-- #region sub-heading -->
+<div class="sub-heading text-block padding-top" id="index-3">
+    <span class="cms-sub-heading">The Interface</span>
+</div>
+<!-- #endregion sub-heading -->
+
+<div class="text-block padding-top padding-bottom">
+    <!--&-->
+    <strong>Save & Load</strong> (Simple mode)<br><br>
+<strong>Save to ExportSettings</strong> – Save basic Player settings and build scenes to an ExportSettings asset file. This file must be saved within the main project assets directory. To work correctly with the export tools, save all asset files within the same folder.
+<br><br>
+<strong>Load from ExportSettings</strong> – Load an ExportSettings profile back into the Player/ Build settings. Take care when using this option to ensure that replacing the current Player and Build settings is the desired action.
+    <!--&-->
+</div>
+
+<div class="text-block  padding-bottom">
+    <!--&-->
+    <strong>Build</strong> (Simple and Advanced mode)<br><br>
+The current project name and scene count are defined by the currently loaded Player settings. They should be edited either here or on an ExportSettings profile. An ExportSettings profile can also contain a Build Target Path, setting this value here allows different profiles to be associated with different paths. A custom path can also be set directly here.
+<br><br>
+The Build Target path supports both a full file path (e.g. /Users/{{username}}/Desktop/) or the use of a tilde (~) to substitute the home directory (e.g. ~/Desktop/)
+    <!--&-->
+</div>
+
+<!-- #region text block -->
+<div class="text-block padding-bottom">
+    <!--&-->
+    <strong>Overrides </strong><br>
+These are Project settings that can be overridden at the point the project is built. When building a project and the ‘Use Overrides’ box is checked, the override options are applied to the main Player setting.
+    <!--&-->
+</div>
+<!-- #endregion text block -->
+
+<!-- #region text block -->
+<div class="text-block padding-bottom">
+    <!--&-->
+    <strong>Standalone Config.</strong><br>
+As when using the standard Unity tools, you must have the desired platform build support as part of your Unity install.
+<br><br>
+Select the desired build platforms and standalone options.
+<br><br>
+<strong>Auto Name File</strong> – the exported file name will automatically be set to match the name of the Unity project. If this is unchecked then a different file name can be specified.
+<br><br>
+<strong>Dev Build</strong> – creates a dev build of the project.
+<br><br>
+<strong>Auto Run Player</strong> – the built application runs once the build process completes. This assumes the target file is compatible with the operating system running Unity.
+<br><br>
+<strong>Folder To Split Platforms</strong> – this adds an extra file to the path named after the build target platform. E.g. ~/Desktop/MyGame.app becomes ~/Desktop/Mac/MyGame.app
+This is particularly useful when building for multiple platforms at once as it automatically creates an organised folder structure that is easy to navigate.
+<br><br>
+<strong>Exit Unity on Complete</strong> – close Unity once the build process completes
+    <!--&-->
+</div>
+<!-- #endregion text block -->
+
+<!-- #region text block -->
+<div class="text-block padding-bottom">
+    <!--&-->
+    <strong>Build Project</strong><br>
+At this point the build process begins. If overrides have been selected, these will be written to the main Player settings file. If the build in unable to run, an error message will be displayed.
+    <!--&-->
+</div>
+<!-- #endregion text block -->
+
+<!--#region Dashed Line-->
+<br>
+<div class="dashed-line"></div>
+<br>
+<!--#endregion Dashed Line-->
+
+<!-- #region sub-heading -->
+<div class="sub-heading text-block padding-top" id="index-4">
+    <span class="cms-sub-heading">Export Config.</span>
+</div>
+<!-- #endregion sub-heading -->
+
+<!-- #region text block -->
+<div class="text-block padding-top padding-bottom">
+This is where the file paths are specified for: <br><br>
+   1) The ExportSettings files created in Simple mode<br>
+   2) The sub-folders containing the ProjectSettings file copies made in advanced mode<br>
+   3) The folder containing prepared export scripts (creating these is covered later)
+<br><br>
+With each folder selected an item can then be chosen from the corresponding dropdown. This lists applicable files/ folders found in the path location.
+<br><br>
+<strong>Refresh Dropdowns </strong> – if the folder contents is updated externally then press this button to view up-to-date results in Unity.
+<br><br>
+<strong>On Export</strong><br>
+The profile and PlayerSettings that can be written on export are defined using the dropdown, this section is to confirm the actions that will take place when the Run Export button is pressed (and right before the script runs). In general you probably won’t want both these buttons ticked – you will either be applying a profile created in Simple mode, or moving back PlayerSettings copied in Advanced mode.
+<br><br>
+<strong>Overrides</strong><br>
+The overrides defined here are the same as those used when building a project. These will be written to PlayerSettings after the profile/ relevant folders have been copied to ensure that the values used here apply to the built project.
+</div>
+<!-- #endregion text block -->
+
+<!--#region Dashed Line-->
+<br>
+<div class="dashed-line"></div>
+<br>
+<!--#endregion Dashed Line-->
+
+<!-- #region sub-heading -->
+<div class="sub-heading text-block padding-top" id="index-5">
+    <span class="cms-sub-heading">Running an Export</span>
+</div>
+<!-- #endregion sub-heading -->
+
+<!-- #region text block -->
+<div class="text-block padding-top padding-bottom">
+    Note: for Simple and Advanced mode there is a 'Build Project' button that can be used to generate standalone builds at the press of a button. The below specifically applies to use of the 'Export Scripts' tab.
+<br><br>
+These options combine the profiles configured here with tools that run an export script (.bat or .sh) at the point the profile is applied.
+<br><br>
+<strong> Profiles Folder Path </strong> – this should be set to the folder where the ExportSettings asset files have been saved. Once configured the ‘Current Profile’ dropdown below can be used to select the profile that will be used when the export is run. At this point the settings in this profile will be written to the main Player/ Build settings.
+<br><br>
+<strong> Overrides </strong><br>
+When the ‘Use Overrides’ box is checked the values set here will be used instead of those in the ExportSettings asset file (if a profile is being written) or the Player settings (if not).
+<br><br>
+<strong>Profile To Use</strong> – read-only label confirming the profile that will be written into settings and used for the build.
+<br><br>
+<strong>Build Scripts Folder Path</strong> – for best results include all desired scripts within the same folder. With this folder defined here, the build script can be selected from the dropdown.
+<br><br>
+<strong>Script to Run </strong> – this is the script that will build the project from the command line. Within this script options such as build platform(s) can be defined. <!--There is a dedicated script section that covers the creation of scripts and how to effectively use them with the export tool.-->
+<br><br>
+<strong>Run Export</strong> – this writes the contents of the ExportSettings profile to the Player/ Build settings, applies any overrides and then runs the build script.
+    <!--&-->
+</div>
+<!-- #endregion text block -->
+
+
+
+<!--*F-->
+<!--#endregion-->
+
+<!--#region footer-->
+<div class="align-center-d text-block padding-top">
+
+</div>
+        
+<!--Modal-->
+<div id="modal-c" class="modal">
+<span class="close">&times;</span>
+<img class="modal-content" id="img01">
+</div> 
+<!--End Modal-->
+
+<footer>
+<ul>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+<div class="copywright align-center-d">
+    Copyright ©2020
+</div>
+</footer>
+
+<!--page-content-wrapper-->
+</div>
+<script type="text/javascript" src="../scripts.js"></script>
+</body>
+</html> 
+<!--#endregion-->
