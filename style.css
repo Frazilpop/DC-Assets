@@ -622,8 +622,12 @@ nav ul li a:hover { color:#8a8a8a; }
 
 }
 .sidebar-nav li a {
-    color: #b3b3b3 !important;
-  }
+color: #b3b3b3 !important;
+}
+.nav-padding-top {
+padding-top: 35px;
+line-height: 0px;
+}
 /* */
 
 /* bullet list */
