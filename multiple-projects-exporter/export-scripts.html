@@ -1,0 +1,131 @@
+<!--#region head-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<title>Multiple Projects Exporter – Scripting Guide</title>
+<link rel="stylesheet" type= "text/css" href= "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" />
+<link rel="stylesheet" type= "text/css" href= "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
+<link rel="stylesheet" type= "text/css" href= "../style.css" />
+<link rel="stylesheet" type= "text/css" href= "../fonts.css" />
+<link rel="stylesheet" type= "text/css" href= "../nav.css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script> 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
+<link href="https://fonts.googleapis.com/css?family=Lusitana&display=swap" rel="stylesheet">
+</head>
+<body>
+<!--#endregion-->
+
+<!--#region nav-left-->
+<div id="wrapper">
+<div id="sidebar-wrapper">
+<ul class="sidebar-nav">
+<div class="nav-icon-alt header-nav-icon_c" id="menu-toggle_c"></div>
+<li> <a href="../index.html">Home</a>
+<li class="nav-padding-top"> Multiple Projects Exporter
+<li> <a href="user-guide.html">User Guide</a>
+<li> <a href="export-scripts.html">Scripting Guide</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="nav-icon header-nav-icon" id="menu-toggle"></div>
+<!--#endregion-->
+<!--#region page-content-->
+<!--*H-->
+<div class="logo-offset">
+    <img class="center-image feature-logo logo-padding-r" src="" alt="" />
+</div>
+
+<div class="text-block article-title">
+    <h2><span class="main-title" >Scripting Guide</span><br></h2>
+</div>
+
+<div class="text-block padding-top padding-bottom">
+    <!--&-->
+    This guide covers the basics of how to build a Unity project by script. These are the same instructions you would enter into Terminal (Mac) or Command Prompt (Windows) but saved into a single file that can be run as required.
+<br><br>
+It also covers the use of Scripts with the Multiple Projects Exporter asset. Here we can group together a set of custom build settings that are applied right before the script is run. The script then takes over and can perform additional procedures outside of Unity.
+    <!--&-->
+</div>
+
+<!--#region Dashed Line-->
+<br>
+<div class="dashed-line"></div>
+<br>
+<!--#endregion Dashed Line-->
+
+<div class="text-block padding-top padding-bottom">
+    <!--&-->
+    <strong>Do I even need a script?</strong><br>
+If your build process is covered by Unity’s built-in tools (or the Multiple Projects Exporter tools) then probably not. Scripting becomes a requirement when there are additional procedures that need to take place after the project has been built but before it can be distributed or released.
+<br><br>
+You could of-course perform these processes manually, but this is where a script could do the hard work for you! Of course writing the perfect script that turns your entire build process into a one-click procedure could take a while, but if you’re planning further releases or updates then it is usually worth spending the time to automate the process as much as possible.
+    <!--&-->
+</div>
+
+<!--#region Dashed Line-->
+<br>
+<div class="dashed-line"></div>
+<br>
+<!--#endregion Dashed Line-->
+
+<div class="text-block padding-top padding-bottom">
+    <!--&-->
+    <strong>File Formats</strong><br><br>
+<strong>Mac </strong> – you can build a Unity project from Shell script (.sh). This file will need to open in Terminal (control-click ––> Open With) and it will need to be defined as executable. This can be done using the chmod command as below (you will need to specify the correct file path).
+<br><br>
+
+<div style="background: #f0f0f0; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">chmod 755 ~/Documents/ScriptPath/ScriptName.sh
+</pre></div>
+
+</pre></div>
+
+<div class="text-block padding-top padding-bottom">
+    <!--&-->
+Please note: This guide is a work-in-progress and will be completed shortly!    <!--&-->
+</div>
+
+
+    <!--&-->
+</div>
+
+<!--#region Dashed Line-->
+<br>
+<div class="dashed-line"></div>
+<br>
+<!--#endregion Dashed Line-->
+
+
+<!--*F-->
+<!--#endregion-->
+
+<!--#region footer-->
+<div class="align-center-d text-block padding-top">
+
+</div>
+        
+<!--Modal-->
+<div id="modal-c" class="modal">
+<span class="close">&times;</span>
+<img class="modal-content" id="img01">
+</div> 
+<!--End Modal-->
+
+<footer>
+<ul>
+<li><a href="mailto:draculascave.co@gmail.com">Contact</a></li>
+</ul>
+<div class="copywright align-center-d">
+    Copyright ©2020 DC Assets
+</div>
+</footer>
+
+<!--page-content-wrapper-->
+</div>
+<script type="text/javascript" src="../scripts.js"></script>
+</body>
+</html> 
+<!--#endregion-->
